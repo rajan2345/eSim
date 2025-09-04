@@ -112,8 +112,8 @@ function installKicad
     ubuntu_version=$(lsb_release -rs)
 
     # Define KiCad PPAs based on Ubuntu version
-    if [[ "$ubuntu_version" == "24.04" ]]; then
-        echo "Ubuntu 24.04 detected."
+    if [[ "$ubuntu_version" == "24.04" ]] || [[ "$ubuntu_version" == "25.04" ]]; then
+        echo "Ubuntu $ubuntu_version detected.Using KiCad 8.0 PPA."
         kicadppa="kicad/kicad-8.0-releases"
 
         # Check if KiCad is installed using dpkg-query for the main package
@@ -144,6 +144,7 @@ function installKicad
     # Check if the PPA is already added
     if ! grep -q "^deb .*${kicadppa}" /etc/apt/sources.list /etc/apt/sources.list.d/* 2>/dev/null; then
         echo "Adding KiCad PPA to local apt repository: $kicadppa"
+	sudo apt install -y software-properties-common
         sudo add-apt-repository -y "ppa:$kicadppa"
         sudo apt-get update
     else
