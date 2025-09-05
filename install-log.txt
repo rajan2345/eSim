@@ -6,8 +6,15 @@ Updating apt index files...................
 Hit:1 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky InRelease
 Hit:2 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky-updates InRelease
 Hit:3 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky-backports InRelease
-Hit:4 http://security.ubuntu.com/ubuntu plucky-security InRelease
-Hit:5 https://ppa.launchpadcontent.net/kicad/kicad-8.0-releases/ubuntu plucky InRelease
+Hit:4 https://ppa.launchpadcontent.net/kicad/kicad-8.0-releases/ubuntu plucky InRelease
+Ign:5 http://security.ubuntu.com/ubuntu plucky-security InRelease
+Get:5 http://security.ubuntu.com/ubuntu plucky-security InRelease [126 kB]
+Get:6 http://security.ubuntu.com/ubuntu plucky-security/main amd64 Packages [206 kB]
+Get:7 http://security.ubuntu.com/ubuntu plucky-security/main amd64 Components [14.8 kB]
+Get:8 http://security.ubuntu.com/ubuntu plucky-security/universe amd64 Components [1704 B]
+Get:9 http://security.ubuntu.com/ubuntu plucky-security/restricted amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu plucky-security/multiverse amd64 Components [212 B]
+Fetched 350 kB in 1min 29s (3917 B/s)
 Reading package lists...
 Instaling virtualenv.......................
 
@@ -19,9 +26,9 @@ Reading state information...
 python3-virtualenv is already the newest version (20.29.1+ds-1).
 Solving dependencies...
 Summary:
-  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 1
 Creating virtual environment to isolate packages 
-created virtual environment CPython3.13.3.final.0-64 in 321ms
+created virtual environment CPython3.13.3.final.0-64 in 279ms
   creator CPython3Posix(dest=/home/rzn/.esim/env, clear=False, no_vcs_ignore=False, global=False)
   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/rzn/.local/share/virtualenv)
     added seed packages: PyQt5==5.15.11, PyQt5_Qt5==5.15.17, PyQt5_sip==12.17.0, PyYAML==6.0.2, anyio==4.10.0, argparse==1.4.0, certifi==2025.8.3, charset_normalizer==3.4.3, click==8.2.1, contourpy==1.3.3, cycler==0.12.1, fonttools==4.59.2, h11==0.16.0, hdlparse==1.0.7, httpcore==1.0.9, httpx==0.28.1, idna==3.10, kiwisolver==1.4.9, makerchip_app==1.1.5, markdown_it_py==4.0.0, matplotlib==3.10.6, mdurl==0.1.2, numpy==2.3.2, packaging==25.0, path==17.1.1, pcpp==1.30, pillow==11.3.0, pip==25.0, pygments==2.19.2, pyparsing==3.2.3, python_dateutil==2.9.0.post0, requests==2.32.5, rich==13.9.4, sandpiper_saas==1.1.0, six==1.17.0, sniffio==1.3.1, sseclient_py==1.8.0, urllib3==2.5.0, volare==0.20.6, watchdog==6.0.0, zstandard==0.24.0
@@ -44,35 +51,35 @@ Building dependency tree...
 Reading state information...
 xterm is already the newest version (397-1ubuntu1).
 Solving dependencies...
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
 Installing Psutil..........................
 Reading package lists...
 Building dependency tree...
 Reading state information...
 python3-psutil is already the newest version (5.9.8-2build3).
 Solving dependencies...
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
 Installing PyQt5...........................
 Reading package lists...
 Building dependency tree...
 Reading state information...
 python3-pyqt5 is already the newest version (5.15.11+dfsg-2).
 Solving dependencies...
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
 Installing Matplotlib......................
 Reading package lists...
 Building dependency tree...
 Reading state information...
 python3-matplotlib is already the newest version (3.8.3-7build1).
 Solving dependencies...
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
 Installing Setuptools...................
 Reading package lists...
 Building dependency tree...
 Reading state information...
 python3-setuptools is already the newest version (75.8.0-1ubuntu1).
 Solving dependencies...
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
 Installing Pip3............................
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
@@ -83,7 +90,7 @@ Reading state information...
 python3-pip is already the newest version (25.0+dfsg-1ubuntu0.1).
 Solving dependencies...
 Summary:
-  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 1
 Installing Watchdog........................
 Requirement already satisfied: watchdog in /home/rzn/.esim/env/lib/python3.13/site-packages (6.0.0)
 Installing Hdlparse........................
@@ -146,7 +153,7 @@ Reading state information...
 xz-utils is already the newest version (5.6.4-1ubuntu1).
 Solving dependencies...
 Summary:
-  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 1
 Requirement already satisfied: volare in /home/rzn/.esim/env/lib/python3.13/site-packages (0.20.6)
 Requirement already satisfied: click<9,>=8 in /home/rzn/.esim/env/lib/python3.13/site-packages (from volare) (8.2.1)
 Requirement already satisfied: httpx<0.29,>=0.22.0 in /home/rzn/.esim/env/lib/python3.13/site-packages (from volare) (0.28.1)
@@ -165,6 +172,7 @@ Requirement already satisfied: mdurl~=0.1 in /home/rzn/.esim/env/lib/python3.13/
 Requirement already satisfied: sniffio>=1.1 in /home/rzn/.esim/env/lib/python3.13/site-packages (from anyio->httpx<0.29,>=0.22.0->volare) (1.3.1)
 Installing KiCad...........................
 Ubuntu 25.04 detected.Using KiCad 8.0 PPA.
+KiCad 8.0 is already installed.
 Adding KiCad PPA to local apt repository: kicad/kicad-8.0-releases
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
@@ -175,12 +183,12 @@ Reading state information...
 software-properties-common is already the newest version (0.111).
 Solving dependencies...
 Summary:
-  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 1
 Hit:1 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky InRelease
 Hit:2 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky-updates InRelease
 Hit:3 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky-backports InRelease
-Hit:4 http://security.ubuntu.com/ubuntu plucky-security InRelease
-Hit:5 https://ppa.launchpadcontent.net/kicad/kicad-8.0-releases/ubuntu plucky InRelease
+Hit:4 https://ppa.launchpadcontent.net/kicad/kicad-8.0-releases/ubuntu plucky InRelease
+Hit:5 http://security.ubuntu.com/ubuntu plucky-security InRelease
 Reading package lists...
 PPA publishes dbgsym, you may need to include 'main/debug' component
 Repository: 'Types: deb
@@ -194,28 +202,32 @@ Found existing deb entry in /etc/apt/sources.list.d/kicad-ubuntu-kicad-8_0-relea
 Hit:1 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky InRelease
 Hit:2 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky-updates InRelease
 Hit:3 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky-backports InRelease
-Hit:4 http://security.ubuntu.com/ubuntu plucky-security InRelease
-Hit:5 https://ppa.launchpadcontent.net/kicad/kicad-8.0-releases/ubuntu plucky InRelease
+Hit:4 https://ppa.launchpadcontent.net/kicad/kicad-8.0-releases/ubuntu plucky InRelease
+Ign:5 http://security.ubuntu.com/ubuntu plucky-security InRelease
+Ign:5 http://security.ubuntu.com/ubuntu plucky-security InRelease
+Ign:5 http://security.ubuntu.com/ubuntu plucky-security InRelease
+Get:5 http://security.ubuntu.com/ubuntu plucky-security InRelease [126 kB]
+Fetched 126 kB in 3min 53s (541 B/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
 Reading state information...
+kicad is already the newest version (8.0.9-0~ubuntu25.04.1).
+kicad-footprints is already the newest version (8.0.9~ubuntu25.04.1).
+kicad-footprints set to manually installed.
+kicad-libraries is already the newest version (8.0.9~ubuntu25.04.1).
+kicad-libraries set to manually installed.
+kicad-symbols is already the newest version (8.0.9~ubuntu25.04.1).
+kicad-symbols set to manually installed.
+kicad-templates is already the newest version (8.0.9~ubuntu25.04.1).
+kicad-templates set to manually installed.
 Solving dependencies...
-Some packages could not be installed. This may mean that you have
-requested an impossible situation or if you are using the unstable
-distribution that some required packages have not yet been created
-or been moved out of Incoming.
-The following information may help to resolve the situation:
-
-The following packages have unmet dependencies:
- kicad : Depends: libgit2-1.8 (>= 1.8.0) but it is not installable
-E: Unable to correct problems, you have held broken packages.
-E: The following information from --solver 3.0 may provide additional context:
-   Unable to satisfy dependencies. Reached two conflicting decisions:
-   1. kicad:amd64=8.0.9-0~ubuntu25.04.1 is selected for install
-   2. kicad:amd64=8.0.9-0~ubuntu25.04.1 Depends libgit2-1.8 (>= 1.8.0)
-      but none of the choices are installable:
-      [no choices]
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+KiCad installation completed successfully!
+tar (child): library/kicadLibrary.tar.xz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
 
 
 Error! Kindly resolve above error(s) and try again.
