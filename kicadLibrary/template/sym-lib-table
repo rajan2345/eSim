@@ -1,0 +1,3 @@
+(sym-lib-table
+  (lib (name eSim-symbols)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/eSim-symbols)(options "")(descr "eSim custom symbols"))
+)
