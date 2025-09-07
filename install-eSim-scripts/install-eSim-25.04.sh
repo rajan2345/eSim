@@ -256,7 +256,7 @@ function copyKicadLibrary
     trap "" ERR # Do not trap on error of any command
     
     # Remove extracted KiCad Library - not needed anymore
-    rm -rf kicadLibrary
+   #  rm -rf kicadLibrary
 
     set -e      # Re-enable exit on error
     trap error_exit ERR
