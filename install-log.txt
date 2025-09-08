@@ -7,7 +7,12 @@ Hit:1 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky InRelease
 Hit:2 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky-updates InRelease
 Hit:3 http://us-central1.gce.archive.ubuntu.com/ubuntu plucky-backports InRelease
 Hit:4 https://ppa.launchpadcontent.net/kicad/kicad-8.0-releases/ubuntu plucky InRelease
-Hit:5 http://security.ubuntu.com/ubuntu plucky-security InRelease
+Get:5 http://security.ubuntu.com/ubuntu plucky-security InRelease [126 kB]
+Get:6 http://security.ubuntu.com/ubuntu plucky-security/main amd64 Components [14.8 kB]
+Get:7 http://security.ubuntu.com/ubuntu plucky-security/universe amd64 Components [1708 B]
+Get:8 http://security.ubuntu.com/ubuntu plucky-security/restricted amd64 Components [212 B]
+Get:9 http://security.ubuntu.com/ubuntu plucky-security/multiverse amd64 Components [212 B]
+Fetched 143 kB in 9s (16.7 kB/s)
 Reading package lists...
 Instaling virtualenv.......................
 
@@ -21,7 +26,7 @@ Solving dependencies...
 Summary:
   Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 0
 Creating virtual environment to isolate packages 
-created virtual environment CPython3.13.3.final.0-64 in 208ms
+created virtual environment CPython3.13.3.final.0-64 in 262ms
   creator CPython3Posix(dest=/home/rzn/.esim/env, clear=False, no_vcs_ignore=False, global=False)
   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/rzn/.local/share/virtualenv)
     added seed packages: PyQt5==5.15.11, PyQt5_Qt5==5.15.17, PyQt5_sip==12.17.0, PyYAML==6.0.2, anyio==4.10.0, argparse==1.4.0, certifi==2025.8.3, charset_normalizer==3.4.3, click==8.2.1, contourpy==1.3.3, cycler==0.12.1, fonttools==4.59.2, h11==0.16.0, hdlparse==1.0.7, httpcore==1.0.9, httpx==0.28.1, idna==3.10, kiwisolver==1.4.9, makerchip_app==1.1.5, markdown_it_py==4.0.0, matplotlib==3.10.6, mdurl==0.1.2, numpy==2.3.2, packaging==25.0, path==17.1.1, pcpp==1.30, pillow==11.3.0, pip==25.0, pygments==2.19.2, pyparsing==3.2.3, python_dateutil==2.9.0.post0, requests==2.32.5, rich==13.9.4, sandpiper_saas==1.1.0, six==1.17.0, sniffio==1.3.1, sseclient_py==1.8.0, urllib3==2.5.0, volare==0.20.6, watchdog==6.0.0, zstandard==0.24.0
@@ -209,7 +214,7 @@ kicad-templates is already the newest version (8.0.9~ubuntu25.04.1).
 Solving dependencies...
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 KiCad installation completed successfully!
-Creating KiCad 8.0 config directory...
+kicad config folder already exists: /home/rzn/.config/kicad/8.0
 symbol table copied in the directory
 Installing NGHDL...........................
 unzip:  cannot find or open nghdl.zip, nghdl.zip.zip or nghdl.zip.ZIP.
