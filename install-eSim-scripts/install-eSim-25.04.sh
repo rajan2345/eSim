@@ -64,7 +64,7 @@ function installNghdl
 
     echo "Installing NGHDL..........................."
     unzip -o nghdl.zip
-    cd nghdl/
+    cd nghdl/nghdl_packaging
     chmod +x install-nghdl.sh
 
     # Do not trap on error of any command. Let NGHDL script handle its own errors.
@@ -79,30 +79,44 @@ function installNghdl
     cd ../
 
 }
-
-
 function installSky130Pdk
 {
-
     echo "Installing SKY130 PDK......................"
 
-    
-    # Remove any previous sky130-fd-pdr instance, if any
-    sudo rm -rf /usr/share/local/sky130_fd_pr
-    #installing sky130
-    volare enable --pdk sky130 --pdk-root /usr/share/local/ 0fe599b2afb6708d281543108caf8310912f54af
-    # Copy SKY130 library
-    echo "Copying SKY130 PDK........................."
+    # Define correct paths
+    VOLARE_ROOT="/usr/local/share"
+    PDK_ROOT="$VOLARE_ROOT/sky130_fd_pr"
 
-    sudo mkdir -p /usr/share/local/
-    sudo mv /usr/share/local/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_pr /usr/share/local/
-    rm -rf /usr/share/local/volare/
+    # Remove any previous sky130-fd-pr instance, if any
+    sudo rm -rf "$PDK_ROOT"
+
+    # Create volare directory with proper permissions
+    sudo mkdir -p "$VOLARE_ROOT"
+    sudo chown $USER:$USER "$VOLARE_ROOT"
+
+    # Set VOLARE_DIR to avoid permission issues
+    export VOLARE_DIR="$VOLARE_ROOT/volare"
+
+    # Install using volare
+    volare enable --pdk sky130 --pdk-root "$VOLARE_ROOT" 0fe599b2afb6708d281543108caf8310912f54af
+
+    # Copy SKY130 library
+    echo "Copying SKY130 PDK.........................."
+
+    # Move the installed PDK to final location
+    if [ -d "$VOLARE_ROOT/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_pr" ]; then
+        sudo mv "$VOLARE_ROOT/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_pr" "$PDK_ROOT"
+    else
+        echo "Error: SKY130 PDK not downloaded correctly."
+        exit 1
+    fi
+
+    # Clean up volare directory (optional)
+    rm -rf "$VOLARE_ROOT/volare/"
 
     # Change ownership from root to the user
-    sudo chown -R $USER:$USER /usr/share/local/sky130_fd_pr/
-
+    sudo chown -R $USER:$USER "$PDK_ROOT"
 }
-
 
 function installKicad
 {
